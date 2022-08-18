@@ -116,33 +116,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: level_sprites_0
+      name: Spikes
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 0
         width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 270a32f921afad54698b20f5759626de
-      internalID: -775832639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: level_sprites_1
-      rect:
-        serializedVersion: 2
-        x: 68
-        y: 0
-        width: 24
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,12 +137,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_sprites_2
+      name: Flag
       rect:
         serializedVersion: 2
-        x: 100
+        x: 128
         y: 0
-        width: 24
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,10 +158,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: level_sprites_3
+      name: Block
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -193,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8013f586f676d9747bb7b7ba1397f4a2
-      internalID: -1211613363
+      spriteID: 6666bce74c595d24fbbb1c0e207c9f4a
+      internalID: -1896180933
       vertices: []
       indices: 
       edges: []
@@ -210,10 +189,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      level_sprites_0: -775832639
-      level_sprites_1: 1979520859
-      level_sprites_2: -2075765836
-      level_sprites_3: -1211613363
+      Spikes: 1979520859
+      Flag: -2075765836
+      Block: -1896180933
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
