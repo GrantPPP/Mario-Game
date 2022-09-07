@@ -24,17 +24,19 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
         if(Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             canMove = true;
         }
+        MovePlayer();
+        Jump();
     }
 
     private void FixedUpdate()
     {
-        grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
-        MovePlayer();
-        Jump();
+        
+        
     }
 
     void MovePlayer()
