@@ -116,7 +116,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Standing
+      name: idle
       rect:
         serializedVersion: 2
         x: 8
@@ -234,7 +234,7 @@ TextureImporter:
       Run1: 232338907
       Run2: -1678278422
       Run3: 2061362279
-      Standing: -1963439810
+      idle: -1963439810
       Jump: -1952361781
   spritePackingTag: 
   pSDRemoveMatte: 0
