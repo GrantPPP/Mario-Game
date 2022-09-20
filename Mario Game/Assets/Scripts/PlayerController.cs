@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//hi
+
 public class PlayerController : MonoBehaviour
 {
     public float speed; 
@@ -9,10 +9,7 @@ public class PlayerController : MonoBehaviour
     private bool canMove;
     private Rigidbody2D theRB2D;
 
-    public bool grounded;
-    public LayerMask whatIsGrd;
-    public Transform grdChecker;
-    public float grdCheckerRad;
+   
 
     public float airTime;
     public float airTimeCounter;
@@ -31,13 +28,14 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        grounded = Physics2D.OverlapCircle(grdChecker.position, grdCheckerRad, whatIsGrd);
+        
         if(Input.GetAxisRaw("Horizontal") > 0.5f || Input.GetAxisRaw("Horizontal") < -0.5f)
         {
             canMove = true;
         }
         MovePlayer();
         Jump();
+        Debug.Log(theRB2D.position.y);
     }
 
     private void FixedUpdate()
@@ -63,7 +61,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if(grounded == true)
+        if(theRB2D.position.y < -2.1)
         {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
@@ -80,16 +78,23 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        if(Input.GetKey(KeyCode.X))
+        {
+            theRB2D.velocity = new Vector2(theRB2D.velocity.x, 50);
+            
+        }
+
         if(Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             airTimeCounter = 0;
         }
 
-        if(grounded)
+        if(Input.GetKey(KeyCode.Tab))
         {
-            airTimeCounter = airTime;
+
+            theRB2D.position = new Vector2(0, 0);
         }
 
-        theAnimator.SetBool("Grounded", grounded);
+        
     }
 }

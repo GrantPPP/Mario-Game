@@ -5693,12 +5693,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   jumpForce: 5
-  grounded: 0
-  whatIsGrd:
-    serializedVersion: 2
-    m_Bits: 256
-  grdChecker: {fileID: 1518613613}
-  grdCheckerRad: 0.3
   airTime: 0.25
   airTimeCounter: 0
 --- !u!50 &1784607002
