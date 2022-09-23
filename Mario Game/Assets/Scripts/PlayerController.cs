@@ -92,4 +92,12 @@ public class PlayerController : MonoBehaviour
 
         theAnimator.SetBool("Grounded", grounded);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         if(collision.gameObject.tag == "Spike")
+         {
+            Debug.Log("Ouch!");
+         }
+    }
 }
