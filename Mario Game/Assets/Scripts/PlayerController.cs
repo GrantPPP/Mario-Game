@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
         theAnimator = GetComponent<Animator>();
 
         airTimeCounter = airTime;
+        
     }
 
     // Update is called once per frame
@@ -35,7 +36,9 @@ public class PlayerController : MonoBehaviour
         }
         MovePlayer();
         Jump();
-        Debug.Log(theRB2D.position.y);
+        Debug.Log(theRB2D.velocity.y);
+
+        
     }
 
     private void FixedUpdate()
@@ -95,6 +98,30 @@ public class PlayerController : MonoBehaviour
             theRB2D.position = new Vector2(0, 0);
         }
 
+        //Start of Quiz 
+
+        if(Input.GetKeyUp(KeyCode.B))
+        {
+            theRB2D.velocity = new Vector2(0, 0);
+        }
         
+        if(Input.GetKeyUp(KeyCode.I))
+        {
+            theRB2D.position = new Vector2(0, theRB2D.position.y);
+        }
+
+        if(Input.GetKeyUp(KeyCode.O))
+        {
+            theRB2D.position = new Vector2(-theRB2D.position.x, -theRB2D.position.y);
+        }
+
+        if(theRB2D.position.x > 0)
+        {
+        if(Input.GetKeyUp(KeyCode.P))
+        {
+            
+            theRB2D.velocity = new Vector2(20, theRB2D.velocity.y);
+        }
+        }
     }
 }
